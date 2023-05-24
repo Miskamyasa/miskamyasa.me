@@ -1,0 +1,30 @@
+---
+/* eslint-disable */
+// https://schema.org
+
+const schemes = [
+    {
+        "@context": "https://schema.org/",
+        "@type": "Person",
+        name: "Denis Zaitsev",
+        url: "https://miskamyasa.me/",
+        image: "https://miskamyasa.me/static-avatar.png",
+        sameAs: [
+            "https://www.linkedin.com/in/miskamyasa/",
+            "https://github.com/Miskamyasa",
+        ],
+        jobTitle: "Frontend Developer",
+    },
+];
+---
+
+<Fragment>
+    {
+        schemes.map((scheme) => (
+            <script
+                type="application/ld+json"
+                set:html={JSON.stringify(scheme)}
+            />
+        ))
+    }
+</Fragment>

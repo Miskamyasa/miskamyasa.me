@@ -1,0 +1,46 @@
+---
+import {Icon} from "astro-icon"
+---
+
+<section class="py-3">
+    <h2 class="bg-darker px-6 py-1 mb-2">Contact</h2>
+    <dl class="px-6 pt-2">
+        <dt>Address</dt>
+        <dd class="font-light mb-2">Jerusalem, Israel</dd>
+        <dt>Phone</dt>
+        <dd class="font-light mb-2">
+            <a href="tel:+972503116256">
+                <span>+972 50 311-62-56</span>
+            </a>
+        </dd>
+        <dt>E-mail</dt>
+        <dd class="font-light mb-2">
+            <a href="mailto:zaytsevdi@gmail.com"> zaytsevdi@gmail.com</a>
+        </dd>
+        <dt>Links</dt>
+        <dd class="font-light mb-2 flex items-center gap-2 ml-[-2px]">
+            <a
+                href="https://www.linkedin.com/in/miskamyasa/"
+                rel="noopener noreferrer"
+                target="_blank">
+                <Icon
+                    name="mdi:linkedin"
+                    size="28" />
+            </a>
+            <a
+                href="https://github.com/Miskamyasa"
+                rel="noopener noreferrer"
+                target="_blank">
+                <Icon
+                    name="mdi:github-circle"
+                    size="26" />
+            </a>
+        </dd>
+    </dl>
+</section>
+
+<style>
+    dt {
+        @apply font-semibold;
+    }
+</style>
