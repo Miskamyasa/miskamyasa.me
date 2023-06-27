@@ -9,10 +9,9 @@ A brief introduction and overview of your personal website. Mention the purpose 
 - [About](#about)
 - [Technologies Used](#technologies-used)
 - [Installation](#installation-and-development)
-- [Usage](#usage)
+- [Contact](#contact)
 - [Contributing](#contributing)
 - [License](#license)
-- [Contact](#contact)
 
 ## About
 
@@ -55,7 +54,7 @@ My LinkedIn: [linkedin.com/in/miskamyasa](https://www.linkedin.com/in/miskamyasa
 
 Contributions are always welcome!
 
-## [License](./LICENCE)
+## License
 
 This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
