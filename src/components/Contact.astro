@@ -1,0 +1,55 @@
+---
+import {Icon} from "astro-icon"
+import cs from "../assets/cs.svg"
+---
+
+<section class="py-3">
+    <h2 class="bg-darker px-6 py-1 mb-2">Contact</h2>
+    <dl class="px-6 pt-2">
+        <dt>Address</dt>
+        <dd class="font-light mb-2">Israel</dd>
+        <dt>E-mail</dt>
+        <dd class="font-light mb-2">
+            <a href="mailto:zaytsevdi@gmail.com"> zaytsevdi@gmail.com</a>
+        </dd>
+        <dt>Links</dt>
+        <dd class="font-light mb-2 flex items-center gap-2 ml-[-2px]">
+            <a
+                aria-label="LinkedIn"
+                href="https://www.linkedin.com/in/miskamyasa/"
+                rel="noopener noreferrer"
+                target="_blank">
+                <Icon
+                    name="mdi:linkedin"
+                    size="30" />
+            </a>
+            <a
+                aria-label="GitHub"
+                href="https://github.com/Miskamyasa"
+                rel="noopener noreferrer"
+                target="_blank">
+                <Icon
+                    name="mdi:github-circle"
+                    size="29" />
+            </a>
+            <a
+                aria-label="CodeStats"
+                href="https://codestats.net/users/MiskaMyasa"
+                rel="noopener noreferrer"
+                target="_blank">
+                <div class="ml-[3px] rounded-[4px] bg-white border-2 border-white p-[1px]">
+                    <img
+                        alt="Codestats"
+                        class="w-[18px] h-[18px]"
+                        src={cs} />
+                </div>
+            </a>
+        </dd>
+    </dl>
+</section>
+
+<style>
+    dt {
+        @apply font-semibold;
+    }
+</style>

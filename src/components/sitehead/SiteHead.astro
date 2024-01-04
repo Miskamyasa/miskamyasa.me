@@ -1,0 +1,70 @@
+---
+import Favicon from "../favicon/Favicon.astro"
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+let title = "MiskaMyasa.me"
+let description = "Denis Zaitsev - MiskaMyasa's resume website."
+
+const image = "/static-avatar.png"
+---
+
+<Fragment>
+    <!-- Global Metadata -->
+    <Favicon />
+    <meta charset="utf-8" />
+    <meta
+        content="width=device-width,initial-scale=1"
+        name="viewport" />
+    <meta
+        content={Astro.generator}
+        name="generator" />
+
+    <!-- Canonical URL -->
+    <link
+        href={canonicalURL}
+        rel="canonical" />
+
+    <!-- Primary Meta Tags -->
+    <title>{title}</title>
+    <meta
+        content={title}
+        name="title" />
+    <meta
+        content={description}
+        name="description" />
+
+    <!-- Open Graph / Facebook -->
+    <meta
+        content="website"
+        property="og:type" />
+    <meta
+        content={Astro.url}
+        property="og:url" />
+    <meta
+        content={title}
+        property="og:title" />
+    <meta
+        content={description}
+        property="og:description" />
+    <meta
+        content={new URL(image, Astro.url)}
+        property="og:image" />
+
+    <!-- Twitter -->
+    <meta
+        content="summary_large_image"
+        property="twitter:card" />
+    <meta
+        content={Astro.url}
+        property="twitter:url" />
+    <meta
+        content={title}
+        property="twitter:title" />
+    <meta
+        content={description}
+        property="twitter:description" />
+    <meta
+        content={new URL(image, Astro.url)}
+        property="twitter:image" />
+</Fragment>

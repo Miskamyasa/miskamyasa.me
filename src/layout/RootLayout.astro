@@ -1,0 +1,85 @@
+---
+import "@fontsource-variable/outfit"
+
+import Favicon from "../components/favicon/Favicon.astro"
+import RootSchema from "../components/schemes/RootSchema.astro"
+import {SITE_DESCRIPTION, SITE_TITLE} from "../consts"
+
+const canonicalURL = new URL(Astro.url.pathname, Astro.site)
+
+const image = "/static-avatar.png"
+---
+
+<!DOCTYPE html>
+<html
+    dir="ltr"
+    lang="en">
+
+    <!-- Global Metadata -->
+    <Favicon />
+    <meta charset="utf-8" />
+    <meta
+        content="width=device-width,initial-scale=1"
+        name="viewport" />
+    <meta
+        content={Astro.generator}
+        name="generator" />
+
+    <!-- Canonical URL -->
+    <link
+        href={canonicalURL}
+        rel="canonical" />
+
+    <!-- Primary Meta Tags -->
+    <title>{SITE_TITLE}</title>
+    <meta
+        content={SITE_TITLE}
+        name="title" />
+    <meta
+        content={SITE_DESCRIPTION}
+        name="description" />
+
+    <!-- Open Graph / Facebook -->
+    <meta
+        content="website"
+        property="og:type" />
+    <meta
+        content={Astro.url}
+        property="og:url" />
+    <meta
+        content={SITE_TITLE}
+        property="og:title" />
+    <meta
+        content={SITE_DESCRIPTION}
+        property="og:description" />
+    <meta
+        content={new URL(image, Astro.url)}
+        property="og:image" />
+
+    <!-- Twitter -->
+    <meta
+        content="summary_large_image"
+        property="twitter:card" />
+    <meta
+        content={Astro.url}
+        property="twitter:url" />
+    <meta
+        content={SITE_TITLE}
+        property="twitter:title" />
+    <meta
+        content={SITE_DESCRIPTION}
+        property="twitter:description" />
+    <meta
+        content={new URL(image, Astro.url)}
+        property="twitter:image" />
+    <body class="body overflow-x-hidden antialiased">
+        <script
+            async
+            data-ackee-domain-id="84e41e57-e661-4d4e-9558-f218db0235a3"
+            data-ackee-server="https://ackee.paragraph.red"
+            src="https://ackee.paragraph.red/somethinguseful.js">
+        </script>
+        <slot />
+        <RootSchema />
+    </body>
+</html>
